@@ -26,10 +26,10 @@ export default function InBrowserWallet() {
         <p className="ml-auto font-bold">{balance} SOL</p>
       </div>
       <div className="flex items-center px-4 pb-2 text-xs text-gray-500 font-bold">
-        In-Browser Wallet - only for Devnet
+        In-browser wallet - only for Devnet
       </div>
 
-      <div className="flex p-2 bg-gray-100 rounded-b-lg">
+      <div className="flex p-2 bg-gray-100 rounded-b-lg gap-2">
         <WalletActions />
       </div>
     </div>

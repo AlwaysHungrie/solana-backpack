@@ -3,9 +3,9 @@ import { Keypair } from '@solana/web3.js'
 import { create } from 'zustand'
 
 interface InBrowserWalletStore {
-  keypair: Keypair
+  keypair: Keypair | undefined
   connection: Connection
-  balance: number
+  balance: number | undefined
 
   setKeypair: (keypair?: Keypair) => void
   setConnection: (connection?: Connection) => void
@@ -13,9 +13,9 @@ interface InBrowserWalletStore {
 }
 
 const useInBrowserWalletStore = create<InBrowserWalletStore>((set) => ({
-  keypair: Keypair.generate(),
+  keypair: undefined,
   connection: new Connection('https://api.devnet.solana.com'),
-  balance: 0,
+  balance: undefined,
 
   setKeypair: (keypair?: Keypair) => set({ keypair }),
   setConnection: (connection?: Connection) => set({ connection }),
