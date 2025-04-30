@@ -20,6 +20,7 @@ pub mod keyvalue_store {
     }
 
     pub fn update_key_value_store(ctx: Context<UpdateKeyValueStore>, 
+        _key: String,
         value: String
     ) -> Result<()> {
         let key_value_store = &mut ctx.accounts.key_value_store;
@@ -27,7 +28,9 @@ pub mod keyvalue_store {
         Ok(())
     }
 
-    pub fn delete_key_value_store(_ctx: Context<DeleteKeyValueStore>) -> Result<()> {
+    pub fn delete_key_value_store(_ctx: Context<DeleteKeyValueStore>,
+        _key: String,
+    ) -> Result<()> {
         Ok(())
     }
 }

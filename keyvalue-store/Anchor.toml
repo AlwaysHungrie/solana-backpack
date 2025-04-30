@@ -12,7 +12,7 @@ keyvalue_store = "AkwgL7tnCrWdtfeCfiVBj15NfuNdbQ1R675uJDw6NEkF"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
